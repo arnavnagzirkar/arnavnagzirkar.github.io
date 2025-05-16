@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home • Your Name</title>
+  <title>Contact • Your Name</title>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
   <nav class="navbar">
     <a href="index.html" class="logo">Your Name</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
 
-  <header class="hero" style="background-image:url('img/hero-bg.jpg')">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hello">Hello, I’m</p>
-      <h1 class="name">Arnav Nagzirkar</h1>
-      <p class="subtitle">And this is my personal website</p>
-    </div>
-  </header>
+  <main class="contact-page">
+    <h2>Get In Touch</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
 
   <footer class="site-footer">
     <p>© 2025 Your Name. All rights reserved.</p>
