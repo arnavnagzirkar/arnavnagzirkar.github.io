@@ -1,37 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Reset & box-sizing */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* ===== RESET & BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-/* Base */
 body {
   font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
   color: #333;
   line-height: 1.6;
   background: #f5f5f5;
 }
-a { text-decoration: none; color: inherit; }
 
-/* Navbar */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
   background: rgba(0,0,0,0.6);
   padding: 1rem 2rem;
-  display: flex; align-items: center;
+  display: flex;
+  align-items: center;
   z-index: 10;
 }
+
 .navbar .logo {
-  font-weight: bold; color: #fff;
+  font-weight: bold;
+  color: #fff;
   margin-right: auto;
   font-size: 1.2rem;
 }
-.nav-links { list-style: none; display: flex; gap: 1rem; }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
 .nav-links a {
   color: #eee;
   padding: 0.5rem;
   transition: background 0.3s;
 }
+
 .nav-links a.active,
 .nav-links a:hover {
   background: #fff;
@@ -39,49 +56,59 @@ a { text-decoration: none; color: inherit; }
   border-radius: 4px;
 }
 
-/* Hero */
+/* ===== HERO ===== */
 .hero {
   height: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
+
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.5);
 }
+
 .hero-content {
-  position: relative; color: #fff;
+  position: relative;
+  color: #fff;
 }
+
 .hero-content .hello {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
 .hero-content .name {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
+
 .hero-content .subtitle {
   font-size: 1.2rem;
 }
 
-/* Main layout */
+/* ===== MAIN LAYOUT ===== */
 main {
-  padding: 6rem 2rem 2rem; /* push below fixed nav */
-  max-width: 1200px; margin: 0 auto;
+  padding: 6rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Portfolio */
+/* ===== PORTFOLIO FILTER ===== */
 .filter {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin: 2rem 0;
 }
+
 .filter button {
   background: none;
   border: 2px solid #555;
@@ -89,26 +116,114 @@ main {
   cursor: pointer;
   transition: all 0.3s;
 }
+
 .filter button.active,
 .filter button:hover {
   background: #555;
   color: #fff;
 }
+
+/* ===== GRID LAYOUT ===== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 }
-.portfolio-item img {
-  width: 100%; display: block;
-  border-radius: 6px;
-  transition: transform 0.3s;
-}
-.portfolio-item img:hover {
-  transform: scale(1.05);
+
+/* ===== CARD STYLING ===== */
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e9e9ee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-/* Pages */
+.portfolio-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+/* ===== PROJECT IMAGES ===== */
+.portfolio-item.project > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== EXPERIENCE LOGOS (Scaled to 50×50, No Cropping) ===== */
+:root {
+  --exp-logo: 50px;
+}
+
+.portfolio-item.experience {
+  text-align: center;
+  padding-top: 1rem;
+  align-items: center;
+}
+
+.portfolio-item.experience > img {
+  width: var(--exp-logo);
+  height: var(--exp-logo);
+  object-fit: contain; /* ✅ scale proportionally with no cropping */
+  object-position: center;
+  display: block;
+  margin: 0 auto 10px;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #eee inset;
+}
+
+/* ===== CARD CONTENT ===== */
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px 18px;
+  height: 100%;
+}
+
+.portfolio-content h3 {
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 2px 0 0;
+}
+
+.portfolio-content ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.portfolio-content .btn {
+  margin-top: auto;
+}
+
+/* Clamp long text (optional) */
+.portfolio-item.project .portfolio-content p:nth-of-type(2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===== HEADINGS ===== */
+.portfolio-page h1 {
+  margin-bottom: .75rem;
+}
+
+.portfolio-intro {
+  max-width: 800px;
+  margin: 0 auto 1.25rem;
+  color: #555;
+}
+
 .portfolio-page h2,
 .resume-page h2,
 .about-page h2,
@@ -118,7 +233,7 @@ main {
   margin-bottom: 1rem;
 }
 
-/* About */
+/* ===== ABOUT SECTION ===== */
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -126,27 +241,32 @@ main {
   align-items: center;
   justify-content: center;
 }
+
 .about-container img {
   width: 250px;
   border-radius: 6px;
 }
+
 .about-text {
   max-width: 600px;
 }
 
-/* Contact Form */
+/* ===== CONTACT FORM ===== */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
-  display: flex; flex-direction: column;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
+
 .contact-form input,
 .contact-form textarea {
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
 .contact-form button {
   padding: 0.8rem;
   border: none;
@@ -162,163 +282,54 @@ main {
   color: #2a7a2a;
 }
 
-/* Updates */
+/* ===== UPDATES SECTION ===== */
 .updates {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .updates h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
 }
+
 .updates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
+
 .update-item {
   background: #fff;
   padding: 1rem 1.5rem;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 .update-item time {
   font-size: 0.8rem;
   color: #999;
   display: block;
   margin-bottom: 0.25rem;
 }
+
 .update-item h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+
 .update-item p {
   font-size: 0.95rem;
   color: #555;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 .site-footer {
   text-align: center;
   padding: 2rem 0;
   background: #222;
   color: #aaa;
   margin-top: 4rem;
-}
-
-/* 1) Responsive grid with equal-height rows */
-.portfolio-page .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
-  align-items: stretch;              /* make children stretch to same row height */
-}
-
-/* 2) Card container */
-.portfolio-item {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  border: 1px solid #e9e9ee;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 1px 2px rgba(0,0,0,.05);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.portfolio-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.08);
-}
-
-/* 3) Image: same height for all cards */
-.portfolio-item > img {
-  width: 100%;
-  aspect-ratio: 16 / 9;              /* consistent thumbnail height */
-  object-fit: cover;                  /* fill the frame for screenshots */
-  display: block;
-}
-
-/* Logos (experience) look better contained instead of cropped */
-.portfolio-item.experience > img {
-  object-fit: contain;
-  background: #fafafa;
-  padding: 10px;
-}
-
-/* 4) Content fills remaining height so buttons align at bottom */
-.portfolio-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 16px 18px 18px;
-  height: 100%;
-}
-.portfolio-content h3 {
-  font-size: 1.05rem;
-  line-height: 1.35;
-  margin: 2px 0 0;
-}
-.portfolio-content ul {
-  margin: 4px 0 0;
-  padding-left: 18px;
-  display: grid;
-  gap: 6px;
-}
-.portfolio-content .btn {
-  margin-top: auto;                   /* push CTA to bottom for equalized cards */
-}
-
-/* 5) Keep teaser text same height (optional) */
-.portfolio-item.project .portfolio-content p:nth-of-type(2) {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;              /* show ~3 lines then ellipsis */
-  line-clamp: 3;                      /* standard property for compatibility */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* 6) Small polish */
-.portfolio-page h1 { margin-bottom: .75rem; }
-.portfolio-intro { max-width: 800px; margin: 0 auto 1.25rem; color: #555; }
-
-/* 7) Make all portfolio images lazy-load without HTML edits (progressive enhancement) */
-.portfolio-item > img { content-visibility: auto; }
-
-/* === Limit and standardize experience logos === */
-.portfolio-item.experience > img {
-  max-width: 120px;            /* set a max width */
-  max-height: 120px;           /* set a max height */
-  margin: 0 auto 12px;         /* center it above the content */
-  object-fit: contain;         /* keep aspect ratio */
-  display: block;
-}
-
-/* Optional: make the cards feel cleaner */
-.portfolio-item.experience {
-  text-align: center;          /* center-align text for a balanced look */
-  padding-top: 1rem;
-}
-.portfolio-item.experience .portfolio-content h3 {
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-}
-.portfolio-item.experience .portfolio-content ul {
-  text-align: left;            /* keep bullet points aligned */
-  max-width: 90%;
-  margin: 0.5rem auto;
-}
-
-/* Project screenshots still use full width */
-.portfolio-item.project > img {
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-}
-
-.portfolio-item.experience > img {
-  background: #fafafa;
-  padding: 8px;
-  border-radius: 12px;
 }
