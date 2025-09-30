@@ -27,5 +27,30 @@ document.addEventListener('DOMContentLoaded', () => {
           .scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    // Contact form submission
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        const status = document.getElementById('form-status');
+        const data = new FormData(contactForm);
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (response.ok) {
+            contactForm.reset();
+            if (status) status.textContent = 'Thanks for your message!';
+          } else {
+            if (status) status.textContent = 'Oops! There was a problem submitting your form';
+          }
+        } catch (error) {
+          if (status) status.textContent = 'Oops! There was a problem submitting your form';
+        }
+      });
+    }
   });
   
