@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="logo">Arnav Nagzirkar</a>
     <ul class="nav-links">
@@ -19,30 +20,116 @@
   </nav>
 
   <main class="portfolio-page">
-    <h2>Featured Portfolio</h2>
-    <div class="filter">
-      <button data-filter="all" class="active">All</button>
-      <button data-filter="packaging">Packaging</button>
-      <button data-filter="mockup">Mockup</button>
-      <button data-filter="typography">Typography</button>
-      <button data-filter="photography">Photography</button>
-    </div>
+    <h1>Portfolio</h1>
+    <p class="portfolio-intro">
+      A look into my professional journey — from impactful engineering experience to the projects I’ve built to solve real-world problems.
+    </p>
 
-    <div class="grid">
-      <div class="portfolio-item packaging">
-        <img src="img/portfolio1.jpg" alt="Packaging Project">
+    <!-- ===================== WORK EXPERIENCE ===================== -->
+    <section class="experience-section">
+      <h2>💼 Work Experience</h2>
+      <div class="grid">
+
+        <!-- Kavodax Internship -->
+        <div class="portfolio-item experience">
+          <img src="img/kavodax.jpg" alt="Kavodax Project Screenshot">
+          <div class="portfolio-content">
+            <h3>Software Engineering Intern – Kavodax</h3>
+            <p><strong>June 2025 – Aug 2025 • Remote</strong></p>
+            <p>
+              Led a team of 3 to design and implement a blockchain-based cross-border payments system that 
+              reduced global remittance costs to <1% and cut transaction times to under 3 minutes.
+            </p>
+            <ul>
+              <li>Architected modular services for onboarding, wallet management, and real-time transactions.</li>
+              <li>Integrated <strong>Plaid</strong>, <strong>Stripe</strong>, and <strong>PayTrie</strong> for seamless banking and stablecoin conversions.</li>
+              <li>Deployed secure backend infrastructure with <strong>Docker</strong>, <strong>CloudSQL</strong>, <strong>AWS S3</strong>, and <strong>OVH Cloud</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bitts Testing -->
+        <div class="portfolio-item experience">
+          <img src="img/bitts.jpg" alt="Bitts Internship Screenshot">
+          <div class="portfolio-content">
+            <h3>Data Retention Specialist – Bitts Testing Services</h3>
+            <p><strong>June 2021 – Aug 2021 • Mississauga, ON</strong></p>
+            <p>
+              Audited and verified large-scale exam session data (audio/video & metadata) across cloud storage 
+              platforms, ensuring regulatory compliance and operational accuracy.
+            </p>
+            <ul>
+              <li>Automated validation pipelines with <strong>Python</strong>, reducing manual workload by 30%.</li>
+              <li>Maintained data integrity across <strong>AWS S3</strong> and <strong>PostgreSQL</strong> systems.</li>
+              <li>Improved internal data reporting workflows for SaaS clients and compliance audits.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="portfolio-item mockup">
-        <img src="img/portfolio2.jpg" alt="Mockup Project">
+    </section>
+
+    <!-- ===================== PROJECTS SECTION ===================== -->
+    <section class="projects-section">
+      <h2>🚀 Featured Projects</h2>
+      <div class="grid">
+
+        <!-- StocksNow -->
+        <div class="portfolio-item project">
+          <img src="img/stocksnow.jpg" alt="StocksNow Screenshot">
+          <div class="portfolio-content">
+            <h3>StocksNow – AI-Powered Financial Analytics</h3>
+            <p><strong>Python, Flask, Hugging Face, VADER, yfinance, Chart.js</strong></p>
+            <p>
+              Built a full-stack platform for sentiment-driven trading signals with news NLP, 
+              momentum indicators, and daily backtesting — producing key metrics like Sharpe Ratio and CAGR.
+            </p>
+            <a href="https://github.com/arnavnagzirkar/StocksNow" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
+
+        <!-- Custom Shell -->
+        <div class="portfolio-item project">
+          <img src="img/customshell.jpg" alt="Custom Shell Screenshot">
+          <div class="portfolio-content">
+            <h3>Custom Shell – Unix-Style Command Shell</h3>
+            <p><strong>C, Socket Programming, Signals, Process Control</strong></p>
+            <p>
+              Developed a fully functional Linux-like shell with pipes, background jobs, and signal handling. 
+              Extended it with multiplayer client-server communication built directly into the shell.
+            </p>
+            <a href="https://github.com/arnavnagzirkar" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
+
+        <!-- JourneyMatch -->
+        <div class="portfolio-item project">
+          <img src="img/journeymatch.jpg" alt="JourneyMatch Screenshot">
+          <div class="portfolio-content">
+            <h3>JourneyMatch – Travel Discovery App</h3>
+            <p><strong>React Native, TypeScript, Django, Google Places API</strong></p>
+            <p>
+              A cross-platform Tinder-style travel app that recommends destinations, tags photos, 
+              and deep-links to maps. Backend built with Django APIs for real-time profile updates.
+            </p>
+            <a href="https://github.com/arnavnagzirkar" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
+
+        <!-- LocateLot -->
+        <div class="portfolio-item project">
+          <img src="img/locatelot.jpg" alt="LocateLot Screenshot">
+          <div class="portfolio-content">
+            <h3>LocateLot – Smart Parking Finder</h3>
+            <p><strong>Java, Google Maps API, Clean Architecture</strong></p>
+            <p>
+              Built a smart parking discovery tool that finds and filters parking options in real time. 
+              Designed using clean architecture principles for scalability and maintainability.
+            </p>
+            <a href="https://github.com/arnavnagzirkar" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
       </div>
-      <div class="portfolio-item typography">
-        <img src="img/portfolio3.jpg" alt="Typography Project">
-      </div>
-      <div class="portfolio-item photography">
-        <img src="img/portfolio4.jpg" alt="Photography Project">
-      </div>
-      <!-- …add more items as needed -->
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
