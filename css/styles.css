@@ -207,3 +207,81 @@ main {
   color: #aaa;
   margin-top: 4rem;
 }
+
+/* 1) Responsive grid with equal-height rows */
+.portfolio-page .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  align-items: stretch;              /* make children stretch to same row height */
+}
+
+/* 2) Card container */
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e9e9ee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.portfolio-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+/* 3) Image: same height for all cards */
+.portfolio-item > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;              /* consistent thumbnail height */
+  object-fit: cover;                  /* fill the frame for screenshots */
+  display: block;
+}
+
+/* Logos (experience) look better contained instead of cropped */
+.portfolio-item.experience > img {
+  object-fit: contain;
+  background: #fafafa;
+  padding: 10px;
+}
+
+/* 4) Content fills remaining height so buttons align at bottom */
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px 18px;
+  height: 100%;
+}
+.portfolio-content h3 {
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 2px 0 0;
+}
+.portfolio-content ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+.portfolio-content .btn {
+  margin-top: auto;                   /* push CTA to bottom for equalized cards */
+}
+
+/* 5) Keep teaser text same height (optional) */
+.portfolio-item.project .portfolio-content p:nth-of-type(2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;              /* show ~3 lines then ellipsis */
+  line-clamp: 3;                      /* standard property for compatibility */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 6) Small polish */
+.portfolio-page h1 { margin-bottom: .75rem; }
+.portfolio-intro { max-width: 800px; margin: 0 auto 1.25rem; color: #555; }
+
+/* 7) Make all portfolio images lazy-load without HTML edits (progressive enhancement) */
+.portfolio-item > img { content-visibility: auto; }
