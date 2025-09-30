@@ -285,3 +285,40 @@ main {
 
 /* 7) Make all portfolio images lazy-load without HTML edits (progressive enhancement) */
 .portfolio-item > img { content-visibility: auto; }
+
+/* === Limit and standardize experience logos === */
+.portfolio-item.experience > img {
+  max-width: 120px;            /* set a max width */
+  max-height: 120px;           /* set a max height */
+  margin: 0 auto 12px;         /* center it above the content */
+  object-fit: contain;         /* keep aspect ratio */
+  display: block;
+}
+
+/* Optional: make the cards feel cleaner */
+.portfolio-item.experience {
+  text-align: center;          /* center-align text for a balanced look */
+  padding-top: 1rem;
+}
+.portfolio-item.experience .portfolio-content h3 {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+.portfolio-item.experience .portfolio-content ul {
+  text-align: left;            /* keep bullet points aligned */
+  max-width: 90%;
+  margin: 0.5rem auto;
+}
+
+/* Project screenshots still use full width */
+.portfolio-item.project > img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.portfolio-item.experience > img {
+  background: #fafafa;
+  padding: 8px;
+  border-radius: 12px;
+}
