@@ -6,36 +6,34 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const projects = [
   {
-    title: 'AI-Powered Analytics Dashboard',
-    description: 'Real-time data visualization platform with ML-driven insights and predictive analytics for business intelligence.',
-    image: 'https://images.unsplash.com/photo-1761223976379-04c361d3068a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMG1hY2hpbmUlMjBsZWFybmluZyUyMHZpc3VhbGl6YXRpb258ZW58MXx8fHwxNzYxMzIyMDI5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['Python', 'TensorFlow', 'React', 'D3.js'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    title: 'Blockchain Cross-Border Payments (Internship)',
+    description:
+      'Contributed to a blockchain-based cross-border payment platform at Kavodax. Designed modular onboarding and transaction flows and integrated third-party services.',
+    image:
+      'https://images.unsplash.com/photo-1622630998477-20aa696ecb02?q=80&w=1200&auto=format&fit=crop',
+    tags: ['Next.js', 'Node.js', 'Blockchain', 'AWS'],
+    github: 'https://github.com/arnavnagzirkar',
+    demo: 'https://www.linkedin.com/in/arnav-nagzirkar/',
   },
   {
-    title: 'Neural Network Visualizer',
-    description: 'Interactive web application for visualizing and training custom neural networks with real-time performance metrics.',
-    image: 'https://images.unsplash.com/photo-1645839078449-124db8a049fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXVyYWwlMjBuZXR3b3JrJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjEyOTc1NTV8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['PyTorch', 'Next.js', 'WebGL', 'TypeScript'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    title: 'Space Systems Firmware (UofT Aerospace)',
+    description:
+      'Embedded firmware work for the University of Toronto Aerospace Team (Space Systems), focusing on reliable, maintainable code in a multidisciplinary environment.',
+    image:
+      'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1200&auto=format&fit=crop',
+    tags: ['C', 'Firmware', 'Embedded'],
+    github: 'https://github.com/arnavnagzirkar',
+    demo: 'https://www.utat.ca/',
   },
   {
-    title: 'Smart E-Commerce Platform',
-    description: 'Full-stack marketplace with AI-driven recommendations, natural language search, and automated inventory management.',
-    image: 'https://images.unsplash.com/photo-1758598497143-84a0cfdc9958?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbnxlbnwxfHx8fDE3NjEyODY5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['React', 'Node.js', 'MongoDB', 'OpenAI'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-  },
-  {
-    title: 'Predictive Maintenance System',
-    description: 'IoT-based monitoring system using machine learning to predict equipment failures and optimize maintenance schedules.',
-    image: 'https://images.unsplash.com/photo-1759661966728-4a02e3c6ed91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGRhc2hib2FyZHxlbnwxfHx8fDE3NjEzMTE4NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['Python', 'Scikit-learn', 'Flask', 'PostgreSQL'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    title: 'AI-Powered Financial Tools',
+    description:
+      'Built analysis tooling and experiments with Python and machine learning to extract insights from financial data and support decision-making.',
+    image:
+      'https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1200&auto=format&fit=crop',
+    tags: ['Python', 'Pandas', 'ML'],
+    github: 'https://github.com/arnavnagzirkar',
+    demo: 'https://www.linkedin.com/in/arnav-nagzirkar/',
   },
 ];
 

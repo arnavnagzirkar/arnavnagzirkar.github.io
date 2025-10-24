@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 
 export function Hero() {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = 'Building intelligent systems that shape the future';
+  const fullText = 'Creating reliable, scalable solutions in AI, blockchain, and cloud.';
   const [isTypingComplete, setIsTypingComplete] = useState(false);
 
   useEffect(() => {
@@ -110,7 +110,7 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-[#f8fafc]"
           >
-            <span className="block text-5xl sm:text-6xl lg:text-7xl mb-4">Alex Chen</span>
+            <span className="block text-5xl sm:text-6xl lg:text-7xl mb-4">Arnav Nagzirkar</span>
           </motion.h1>
 
           {/* Title */}
@@ -122,7 +122,7 @@ export function Hero() {
           >
             <span>Software Engineer</span>
             <span className="text-[#38bdf8]">•</span>
-            <span>AI & ML Developer</span>
+            <span>AI, Blockchain & Cloud</span>
           </motion.div>
 
           {/* Typing Animation */}
@@ -169,7 +169,7 @@ export function Hero() {
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://github.com"
+                href="https://github.com/arnavnagzirkar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-lg bg-[#f8fafc]/5 border border-[#38bdf8]/20 hover:border-[#38bdf8] hover:shadow-lg hover:shadow-[#38bdf8]/20 transition-all"
@@ -179,7 +179,7 @@ export function Hero() {
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/arnav-nagzirkar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-lg bg-[#f8fafc]/5 border border-[#38bdf8]/20 hover:border-[#38bdf8] hover:shadow-lg hover:shadow-[#38bdf8]/20 transition-all"
@@ -189,7 +189,7 @@ export function Hero() {
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                href="mailto:alex.chen@example.com"
+                href="#contact"
                 className="p-3 rounded-lg bg-[#f8fafc]/5 border border-[#38bdf8]/20 hover:border-[#38bdf8] hover:shadow-lg hover:shadow-[#38bdf8]/20 transition-all"
               >
                 <Mail className="w-5 h-5 text-[#f8fafc]" />

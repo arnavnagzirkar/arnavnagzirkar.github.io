@@ -1,6 +1,14 @@
 import { motion } from 'motion/react';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
-import { Code2, Rocket, Heart, Coffee } from 'lucide-react';
+import { Code2, Rocket, Heart, Coffee, FileDown, FileText } from 'lucide-react';
+
+// Static asset URLs bundled by Vite (no need to move files to public/)
+const resumeSWE = new URL('../assets/Arnav_Nagzirkar_SWE_Resume.pdf', import.meta.url).href;
+const resumeML = new URL('../assets/Arnav_Nagzirkar_ML_AI_Resume.pdf', import.meta.url).href;
+const resumePM = new URL('../assets/Arnav_Nagzirkar_PM_Resume.pdf', import.meta.url).href;
+const resumeMaster = new URL('../assets/Arnav_Nagzirkar_Master_Resume (4).pdf', import.meta.url).href;
+const awsCert = new URL('../assets/AWS Certified Cloud Practitioner certificate.pdf', import.meta.url).href;
+const kavodaxRef = new URL('../assets/Kavodax Reference Letter - Arnav Nagzirkar.pdf', import.meta.url).href;
 
 export function About() {
   const interests = [
@@ -27,7 +35,7 @@ export function About() {
             <span className="text-[#22c55e]">{' />'}</span>
           </h2>
           <p className="text-[#94a3b8] text-lg max-w-2xl mx-auto">
-            Passionate about leveraging AI to solve real-world problems
+            Honours BSc student at the University of Toronto focusing on AI and blockchain. 4× startup intern, currently building firmware for Space Systems.
           </p>
         </motion.div>
 
@@ -44,11 +52,11 @@ export function About() {
             <div className="relative group">
               <Avatar className="w-64 h-64 md:w-80 md:h-80 border-4 border-[#38bdf8]/30 shadow-2xl shadow-[#38bdf8]/20">
                 <AvatarImage
-                  src="https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjEyMjQwODB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Alex Chen"
+                  src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1200&auto=format&fit=crop"
+                  alt="Arnav Nagzirkar"
                 />
                 <AvatarFallback className="bg-gradient-to-br from-[#38bdf8] to-[#22c55e] text-[#0f172a] text-6xl">
-                  AC
+                  AN
                 </AvatarFallback>
               </Avatar>
 
@@ -75,24 +83,13 @@ export function About() {
           >
             <div className="space-y-4 text-[#94a3b8] leading-relaxed">
               <p>
-                Hey there! I'm <span className="text-[#38bdf8]">Alex Chen</span>, a software engineer 
-                with a passion for artificial intelligence and machine learning. I love building 
-                intelligent systems that make a real difference in people's lives.
+                Hey there! I'm <span className="text-[#38bdf8]">Arnav Nagzirkar</span>, studying Honours BSc in Computer Science (with Statistics and Economics) at the University of Toronto. I build reliable, scalable solutions across AI, blockchain, and cloud.
               </p>
               <p>
-                With over <span className="text-[#22c55e]">6 years of experience</span> in the tech 
-                industry, I've worked on everything from scalable microservices to cutting-edge AI 
-                models. My expertise spans full-stack development, cloud architecture, and modern ML 
-                frameworks.
+                Recently, I have been a Firmware Developer with the University of Toronto Aerospace Team (Space Systems) and a Software Engineering Intern at Kavodax, working on a blockchain-based cross-border payment platform. I also bring experience as a Private Tutor and student leader.
               </p>
               <p>
-                When I'm not coding, you'll find me contributing to open-source projects, writing 
-                technical blogs, or exploring the latest advancements in AI research. I believe in 
-                continuous learning and sharing knowledge with the developer community.
-              </p>
-              <p>
-                I'm always excited to collaborate on innovative projects that push the boundaries of 
-                technology. Let's build something amazing together!
+                I care about teamwork, clarity, and shipping high-quality systems. If you're hiring for Summer 2026 internships, I'd love to connect.
               </p>
             </div>
 
@@ -125,27 +122,34 @@ export function About() {
               </div>
             </div>
 
-            {/* Stats */}
-            <div className="pt-6 grid grid-cols-3 gap-4">
-              {[
-                { value: '50+', label: 'Projects' },
-                { value: '6+', label: 'Years Exp' },
-                { value: '2K+', label: 'Commits' },
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                  className="text-center p-4 rounded-lg bg-gradient-to-br from-[#1e293b]/50 to-[#1e293b]/30 border border-[#38bdf8]/20"
-                >
-                  <div className="text-2xl text-[#38bdf8] mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-[#94a3b8]">{stat.label}</div>
-                </motion.div>
-              ))}
+            {/* Documents */}
+            <div className="pt-8">
+              <h3 className="text-[#f8fafc] mb-4">Resume & Documents</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { label: 'Master Resume (PDF)', href: resumeMaster },
+                  { label: 'SWE Resume (PDF)', href: resumeSWE },
+                  { label: 'ML/AI Resume (PDF)', href: resumeML },
+                  { label: 'PM Resume (PDF)', href: resumePM },
+                  { label: 'AWS Cloud Practitioner (PDF)', href: awsCert },
+                  { label: 'Kavodax Reference Letter (PDF)', href: kavodaxRef },
+                ].map((doc, index) => (
+                  <motion.a
+                    key={doc.label}
+                    href={doc.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    className="flex items-center gap-3 p-3 rounded-lg bg-[#1e293b]/50 border border-[#38bdf8]/20 hover:border-[#38bdf8]/50 hover:bg-[#38bdf8]/5 transition-all"
+                  >
+                    <FileDown className="w-4 h-4 text-[#38bdf8]" />
+                    <span className="text-[#f8fafc] text-sm">{doc.label}</span>
+                  </motion.a>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>

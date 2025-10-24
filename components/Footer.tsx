@@ -3,10 +3,8 @@ import { Github, Linkedin, Twitter, Mail, Heart, Terminal } from 'lucide-react';
 
 export function Footer() {
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:alex.chen@example.com', label: 'Email' },
+    { icon: Github, href: 'https://github.com/arnavnagzirkar', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/arnav-nagzirkar/', label: 'LinkedIn' },
   ];
 
   return (
@@ -80,7 +78,7 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center text-[#94a3b8] text-sm"
           >
-            <p>© 2025 Alex Chen. All rights reserved.</p>
+            <p>© 2025 Arnav Nagzirkar. All rights reserved.</p>
             <p className="mt-1">
               Designed & Developed with modern web technologies
             </p>

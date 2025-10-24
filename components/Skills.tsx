@@ -7,37 +7,37 @@ const skillCategories = [
     title: 'AI & Machine Learning',
     icon: Brain,
     color: '#22c55e',
-    skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenAI', 'Hugging Face', 'LangChain'],
+    skills: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'ML Ops (basics)'],
   },
   {
     title: 'Frontend Development',
     icon: Globe,
     color: '#38bdf8',
-    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vue.js', 'Redux'],
+    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
   },
   {
-    title: 'Backend Development',
+    title: 'Backend & APIs',
     icon: Database,
     color: '#22c55e',
-    skills: ['Node.js', 'Python', 'FastAPI', 'Express', 'PostgreSQL', 'MongoDB'],
+    skills: ['Node.js', 'Express', 'REST APIs'],
   },
   {
     title: 'Programming Languages',
     icon: Code2,
     color: '#38bdf8',
-    skills: ['Python', 'JavaScript', 'TypeScript', 'Java', 'Go', 'Rust'],
+    skills: ['Python', 'TypeScript', 'Java', 'C'],
   },
   {
     title: 'Cloud & DevOps',
     icon: Cpu,
     color: '#22c55e',
-    skills: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Terraform', 'Git'],
+    skills: ['AWS (CCP)', 'Docker', 'CI/CD', 'Git'],
   },
   {
-    title: 'Tools & Frameworks',
+    title: 'Domains',
     icon: Zap,
     color: '#38bdf8',
-    skills: ['VS Code', 'Jupyter', 'GraphQL', 'REST APIs', 'WebSockets', 'Pandas'],
+    skills: ['Blockchain', 'Embedded/Firmware', 'Data Engineering (basics)'],
   },
 ];
 
@@ -148,13 +148,13 @@ export function Skills() {
           <div className="flex flex-wrap justify-center gap-4">
             {[
               'React',
-              'Python',
-              'TensorFlow',
+              'TypeScript',
               'Next.js',
+              'Node.js',
+              'Python',
               'AWS',
               'Docker',
-              'TypeScript',
-              'PostgreSQL',
+              'Blockchain',
             ].map((tech, index) => (
               <motion.div
                 key={tech}

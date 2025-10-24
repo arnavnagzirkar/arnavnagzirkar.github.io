@@ -3,43 +3,48 @@ import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'Senior AI Engineer',
-    company: 'TechVision AI',
-    period: '2023 - Present',
+    title: 'Artificial Intelligence & Machine Learning Intern',
+    company: 'VJDS International Inc.',
+    period: 'Oct 2025 – Present',
     achievements: [
-      'Led development of ML pipeline processing 10M+ daily transactions',
-      'Architected microservices infrastructure reducing latency by 40%',
-      'Mentored team of 5 junior engineers on ML best practices',
+      'Contributing to applied AI/ML initiatives and model development.',
+      'Exploring practical AI capabilities and ethics in real-world use cases.',
     ],
   },
   {
-    title: 'Full-Stack ML Developer',
-    company: 'DataFlow Solutions',
-    period: '2021 - 2023',
+    title: 'Firmware Developer – Space Systems',
+    company: 'University of Toronto Aerospace Team',
+    period: 'Sep 2025 – Present',
     achievements: [
-      'Built real-time analytics dashboard serving 50K+ users',
-      'Implemented NLP models achieving 95% accuracy on classification tasks',
-      'Optimized database queries improving performance by 60%',
+      'Developing firmware for space systems as part of a multidisciplinary team.',
+      'Focusing on reliable, maintainable code and embedded development practices.',
     ],
   },
   {
-    title: 'Software Engineer',
-    company: 'CloudFirst Inc',
-    period: '2019 - 2021',
+    title: 'Software Engineering Intern (Blockchain)',
+    company: 'Kavodax',
+    period: 'Jun 2025 – Aug 2025',
     achievements: [
-      'Developed RESTful APIs handling 1M+ requests per day',
-      'Integrated third-party AI services for intelligent automation',
-      'Contributed to open-source projects with 2K+ GitHub stars',
+      'Helped build a blockchain-based cross-border payment platform.',
+      'Led a small intern team and designed modular onboarding and transaction flows.',
+      'Integrated third-party services and supported cloud-based deployment.',
     ],
   },
   {
-    title: 'Junior Developer',
-    company: 'StartupHub',
-    period: '2018 - 2019',
+    title: 'Private Tutor: Programming & Mathematics',
+    company: 'Self-employed',
+    period: 'Sep 2023 – Jun 2025',
     achievements: [
-      'Created responsive web applications using React and Node.js',
-      'Implemented CI/CD pipelines reducing deployment time by 70%',
-      'Collaborated with designers to deliver pixel-perfect UIs',
+      'Tutored Java and Python for high-school and university students.',
+      'Prepared exercises and reviews for OOP, recursion, and core math topics.',
+    ],
+  },
+  {
+    title: 'UTMSU Board of Directors – First Year Representative',
+    company: 'University of Toronto Mississauga Students’ Union',
+    period: 'Sep 2022 – Aug 2023',
+    achievements: [
+      'Represented 15,000+ students and supported campus events and initiatives.',
     ],
   },
 ];
