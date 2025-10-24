@@ -1,3 +1,4 @@
+import React from 'react';
 import { ParticleBackground } from './components/ParticleBackground';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
