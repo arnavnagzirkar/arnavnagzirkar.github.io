@@ -6,9 +6,15 @@ import { Code2, Rocket, Heart, Coffee, FileDown, FileText } from 'lucide-react';
 const resumeSWE = new URL('../assets/Arnav_Nagzirkar_SWE_Resume.pdf', import.meta.url).href;
 const resumeML = new URL('../assets/Arnav_Nagzirkar_ML_AI_Resume.pdf', import.meta.url).href;
 const resumePM = new URL('../assets/Arnav_Nagzirkar_PM_Resume.pdf', import.meta.url).href;
-const resumeMaster = new URL('../assets/Arnav_Nagzirkar_Master_Resume (4).pdf', import.meta.url).href;
 const awsCert = new URL('../assets/AWS Certified Cloud Practitioner certificate.pdf', import.meta.url).href;
 const kavodaxRef = new URL('../assets/Kavodax Reference Letter - Arnav Nagzirkar.pdf', import.meta.url).href;
+
+// Optional headshot: supports either at repo root (../IMG_5860.png) or assets folder
+const headshotCandidates = import.meta.glob(
+  ['../IMG_5860.png', '../assets/IMG_5860.png'],
+  { eager: true, as: 'url' }
+) as Record<string, string>;
+const headshot = headshotCandidates['../IMG_5860.png'] ?? headshotCandidates['../assets/IMG_5860.png'];
 
 export function About() {
   const interests = [
@@ -52,7 +58,7 @@ export function About() {
             <div className="relative group">
               <Avatar className="w-64 h-64 md:w-80 md:h-80 border-4 border-[#38bdf8]/30 shadow-2xl shadow-[#38bdf8]/20">
                 <AvatarImage
-                  src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1200&auto=format&fit=crop"
+                  src={headshot ?? 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1200&auto=format&fit=crop'}
                   alt="Arnav Nagzirkar"
                 />
                 <AvatarFallback className="bg-gradient-to-br from-[#38bdf8] to-[#22c55e] text-[#0f172a] text-6xl">
@@ -127,7 +133,6 @@ export function About() {
               <h3 className="text-[#f8fafc] mb-4">Resume & Documents</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { label: 'Master Resume (PDF)', href: resumeMaster },
                   { label: 'SWE Resume (PDF)', href: resumeSWE },
                   { label: 'ML/AI Resume (PDF)', href: resumeML },
                   { label: 'PM Resume (PDF)', href: resumePM },

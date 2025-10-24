@@ -12,7 +12,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "types": ["vite/client"]
   },
   "include": ["src", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist"]
